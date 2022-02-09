@@ -1,0 +1,27 @@
+body {
+    margin: 6rem auto 1rem;
+    max-width: 95rem;
+    text-align: center;
+  }
+
+.instructionText {
+    text-align: left;
+    font-weight: 500;
+    padding: 4px 100px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.slides {
+  max-width: 80rem;
+  font-size: 35px;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
