@@ -31,7 +31,7 @@ ul {
 }
 
 #hideMe {
-  animation: hideAnimation 0s ease-in 5s;
+  animation: hideAnimation 0s ease-in 30s;
   animation-fill-mode: forwards;
 }
 
