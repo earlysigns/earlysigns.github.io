@@ -29,3 +29,16 @@ h2 {
 ul {
   list-style-position: outside;
 }
+
+#hideMe {
+  animation: hideAnimation 0s ease-in 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
