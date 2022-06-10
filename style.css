@@ -26,6 +26,20 @@ h2 {
   padding: 100px 0px;
 }
 
+.slidesPB {
+  max-width: 80rem;
+  font-size: 35px;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+
+.slidesP {
+  max-width: 80rem;
+  font-size: 35px;
+  margin: 0 auto;
+  padding: 100px 0px;
+}
+
 ul {
   list-style-position: outside;
 }
