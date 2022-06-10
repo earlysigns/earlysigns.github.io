@@ -19,75 +19,226 @@
   </head>
   <body>
 
-    <div class="instructions">
-        <h1>Instructions</h1>
-        <div class="instructionText">
-            <ul>
-                <li>You will be presented with 5 questions that will require you to reflect on experiences in the past 6 months</li>
-                <li>Verbally answer each question until the next question appears</li>
-                <li>Read each question out loud before answering the question</li>
-                <li>When you have finished, please give us a thumbs up</li>
-                <li>Please press the button below to move on!</li>
-            </ul>
-        </div>
+    <div id="landingPage">
+      <h1>Which study are you here for?</h1>
+        <br> </br>
+        <button class="button" id="earlySignsButton" onClick="showEarlySigns()" style="font-size:18px">Early Signs</button>
+        <br> </br>
+        <button class="button" id="predictBaselineButton" onClick="showPredictBaseline()" style="font-size:18px">Predict (First time)</button>
+        <br> </br>
+        <button class="button" id="predictButton" onClick="showPredict()" style="font-size:18px">Predict (Follow up)</button>
     </div>
 
-    <div class="content" style="text-align: center">
-        <div class="slides" style="display:none">
-            <div id="hideMe">Tell me about a case that you were involved in the ED where you felt there was an unexpected and bad patient outcome</div>
-        </div>
-        <div class="slides" style="display:none">
-            <div id="hideMe">Tell me how the patient outcome made you feel as the responsible provider</div>
-        </div>        
-        <div class="slides" style="display:none">
-            <div id="hideMe">Has this patient case changed your view of yourself as a clinician and how you approach patient care?</div>
-        </div>
-        <div class="slides" style="display:none">
-            <div id="hideMe">Tell me about a situation where you asked yourself, "am I given enough recognition for my efforts?"</div>
-        </div>
-        <div class="slides" style="display:none">
-            <div id="hideMe">What are your expectations about your role and your work as an ED clinician in the future?</div>
-        </div>
+
+    <div id="earlysigns" style="display:none;">
+
+      <div class="instructions">
+          <h1>Instructions</h1>
+          <div class="instructionText">
+              <ul>
+                  <li>You will be presented with 5 questions that will require you to reflect on experiences in the past 6 months</li>
+                  <li>Verbally answer each question until the next question appears</li>
+                  <li>Read each question out loud before answering the question</li>
+                  <li>When you have finished, please give us a thumbs up</li>
+                  <li>Please press the button below to move on!</li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="content" style="text-align: center">
+          <div class="slides" style="display:none">
+              <div id="hideMe">Tell me about a case that you were involved in the ED where you felt there was an unexpected and bad patient outcome</div>
+          </div>
+          <div class="slides" style="display:none">
+              <div id="hideMe">Tell me how the patient outcome made you feel as the responsible provider</div>
+          </div>
+          <div class="slides" style="display:none">
+              <div id="hideMe">Has this patient case changed your view of yourself as a clinician and how you approach patient care?</div>
+          </div>
+          <div class="slides" style="display:none">
+              <div id="hideMe">Tell me about a situation where you asked yourself, "am I given enough recognition for my efforts?"</div>
+          </div>
+          <div class="slides" style="display:none">
+              <div id="hideMe">What are your expectations about your role and your work as an ED clinician in the future?</div>
+          </div>
+      </div>
+
+      <button class="button" id="toggle" onClick="buttonPress()" style="font-size:18px">Continue</button>
+
+      <div class="finished" style="display:none; padding: 75px 0px">
+          <h2>Complete</h2>
+      </div>
+
     </div>
 
-    <button class="button" id="toggle" onClick="buttonPress()" style="font-size:18px">Continue</button>
 
-    <div class="finished" style="display:none; padding: 75px 0px">
-        <h2>Complete</h2>
+    <div id="predictBaseline" style="display:none;">
+
+        <div class="instructions">
+            <h1>Instructions</h1>
+            <div class="instructionText">
+                <ul>
+                    <li>Verbally answer the question until the complete signal appears</li>
+                    <li>Read the question out loud before answering</li>
+                    <li>When you have finished, please give us a thumbs up</li>
+                    <li>Please press the button below to move on!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content" style="text-align: center">
+            <div class="slidesPB" style="display:none">
+                <div id="hideMe">Tell me about the event that brought you to the hospital</div>
+            </div>
+        </div>
+
+        <button class="button" id="togglePB" onClick="buttonPressPB()" style="font-size:18px">Continue</button>
+
+        <div class="finishedPB" style="display:none; padding: 75px 0px">
+            <h2>Complete</h2>
+        </div>
+
     </div>
+
+
+
+    <div id="predict" style="display:none;">
+
+      <div class="instructions">
+          <h1>Instructions</h1>
+          <div class="instructionText">
+              <ul>
+                  <li>You will be presented with 5 questions that will require you to reflect on experiences in the past</li>
+                  <li>Verbally answer each question until the next question appears</li>
+                  <li>Read each question out loud before answering the question</li>
+                  <li>When you have finished, please give us a thumbs up</li>
+                  <li>Please press the button below to move on!</li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="content" style="text-align: center">
+          <div class="slidesP" style="display:none">
+              <div id="hideMe">Tell me about your life before the event that brought you to the hospital</div>
+          </div>
+          <div class="slidesP" style="display:none">
+              <div id="hideMe">Tell me about the event that brought you to the hospital</div>
+          </div>
+          <div class="slidesP" style="display:none">
+              <div id="hideMe">Tell me about your hospital experience</div>
+          </div>
+          <div class="slidesP" style="display:none">
+              <div id="hideMe">Tell me about your life since leaving the hospital</div>
+          </div>
+          <div class="slidesP" style="display:none">
+              <div id="hideMe">What are your expectations about life in the future?</div>
+          </div>
+      </div>
+
+      <button class="button" id="toggleP" onClick="buttonPressP()" style="font-size:18px">Continue</button>
+
+      <div class="finishedP" style="display:none; padding: 75px 0px">
+          <h2>Complete</h2>
+      </div>
+
+    </div>
+
 
     <script>
         var myIndex = 0;
         var start = false;
-        
+
         function buttonPress() {
             start = true;
             var x = document.getElementsByClassName("instructions");
             for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
+                x[i].style.display = "none";
             }
             document.getElementById("toggle").style.visibility = "hidden";
             carousel();
         }
-        
+
+        function buttonPressPB() {
+            start = true;
+            var x = document.getElementsByClassName("instructions");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById("togglePB").style.visibility = "hidden";
+            carouselPB();
+        }
+
+        function buttonPressP() {
+            start = true;
+            var x = document.getElementsByClassName("instructions");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById("toggleP").style.visibility = "hidden";
+            carouselP();
+        }
+
         function carousel() {
             var i;
             var x = document.getElementsByClassName("slides");
             for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
+                x[i].style.display = "none";
             }
             myIndex++;
             if (myIndex > x.length) {
-                endSlideshow()
+                document.getElementsByClassName("finished")[0].style.display = "block"
                 return
-            }    
-            x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 180000); 
+            }
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
         }
 
-        function endSlideshow(){
-            document.getElementsByClassName("finished")[0].style.display = "block"
+        function carouselPB() {
+            var i;
+            var x = document.getElementsByClassName("slidesPB");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                document.getElementsByClassName("finishedPB")[0].style.display = "block"
+                return
+            }
+            x[myIndex-1].style.display = "block";
+            setTimeout(carouselPB, 3000);
         }
+
+        function carouselP() {
+            var i;
+            var x = document.getElementsByClassName("slidesP");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                document.getElementsByClassName("finishedP")[0].style.display = "block"
+                return
+            }
+            x[myIndex-1].style.display = "block";
+            setTimeout(carouselP, 3000);
+        }
+
+        function showEarlySigns() {
+           document.getElementById('earlysigns').style.display = "block";
+           document.getElementById('landingPage').style.display = "none";
+        }
+
+        function showPredictBaseline() {
+           document.getElementById('predictBaseline').style.display = "block";
+           document.getElementById('landingPage').style.display = "none";
+        }
+
+        function showPredict() {
+           document.getElementById('predict').style.display = "block";
+           document.getElementById('landingPage').style.display = "none";
+        }
+
         </script>
     </body>
 </html>
+
